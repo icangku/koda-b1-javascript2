@@ -8,8 +8,8 @@
 flowchart TD
 
 A@{shape: circle, label: 'Start'}
-B@{shape: lean-r, label: 'nums = [1, 2, 3, 14, 5, 6, 7, 8, 9, 10];<br>i = 0'}
-C@{shape: rectangle, label: 'min = nums[0]; <br>max = nums[0]'}
+B@{shape: lean-r, label: 'numbers1 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];<br>numbers2 = [10, 8, 8, 7, 6, 5, 4, 3, 2, 1];<br>i = 0'}
+C@{shape: rectangle, label: 'numbers = [...numbers1, ...numbers2];<br>min = nums[0]; <br>max = nums[0]'}
 D@{shape: diamond, label: 'i <= nums.length'}
 E@{shape: diamond, label: 'nums[i] > max'}
 F@{shape: diamond, label: 'nums[i] < min'}

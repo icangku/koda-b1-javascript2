@@ -1,37 +1,41 @@
-const numbers = [1, 2, 3, 14, 5, 6, 7, 8, 9, 10];
+const numbers1 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const numbers2 = [10, 8, 8, 7, 6, 5, 4, 3, 2, 1];
 
-function findMax(numbers) {
-  let max = numbers[0];
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] > max) {
-      max = numbers[i];
-    }
+const numbers = [...numbers1, ...numbers2];
+
+// function findMax(numbers) {
+let max = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > max) {
+    max = numbers[i];
   }
-
-  console.log(`The max number is ${max}`);
 }
-function findMin(numbers) {
-  let min = numbers[0];
-  let i = 0;
-  do {
-    if (numbers[i] < min) {
-      min = numbers[i];
-    }
-    i++;
-  } while (i <= numbers.length - 1);
+console.log(`The max number is ${max}`);
 
-  console.log(`The min number is ${min}`);
-}
-function findAvg(numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
+// }
+
+// function findMin(numbers) {
+let min = numbers[0];
+let i = 0;
+do {
+  if (numbers[i] < min) {
+    min = numbers[i];
   }
+  i++;
+} while (i <= numbers.length - 1);
+console.log(`The min number is ${min}`);
 
-  const avg = sum / numbers.length;
-  console.log(`The average is: ${avg}`);
+// }
+// function findAvg(numbers) {
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
 }
+const avg = sum / numbers.length;
+console.log(`The average is: ${avg}`);
 
-findMax(numbers);
-findMin(numbers);
-findAvg(numbers);
+// }
+
+// findMax(numbers);
+// findMin(numbers);
+// findAvg(numbers);

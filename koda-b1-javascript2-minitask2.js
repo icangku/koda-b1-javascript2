@@ -25,11 +25,19 @@ const detailPesanan = {
   total: 70200,
 };
 
-const fakturPembayaran = {
+let fakturPembayaran = {
   ...dataPembeli,
   ...detailPesanan,
-  statusPembayaran: "Lunas",
 };
+
+function setStatusPembayaran(statusPembayaran) {
+  fakturPembayaran = {
+    ...fakturPembayaran,
+    statusPembayaran: statusPembayaran,
+  };
+}
+
+setStatusPembayaran("Lunas");
 
 const { name, email, total } = fakturPembayaran;
 
